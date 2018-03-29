@@ -15,7 +15,7 @@ def home():
 
     conn = create_connection()
     tracks = select_all_tracks(conn)
-    # random.shuffle(tracks)
+    random.shuffle(tracks)
     tracks = tracks[:50]
     names = [row[1] for row in tracks]
     urls = [row[9] for row in tracks]
@@ -38,7 +38,7 @@ def genre_play():
     search_form = SearchForm()
     conn = create_connection()
     tracks = select_track_by_genre(conn, request.form['genre'])
-    # random.shuffle(tracks)
+    random.shuffle(tracks)
     tracks = tracks[:50]
     names = [row[1] for row in tracks]
     urls = [row[9] for row in tracks]
@@ -120,7 +120,6 @@ def search():
 
     parameter = request.form['parameter']
     data = request.form['data']
-    print((parameter, data))
     tracks = []
     if parameter is '1':
         cur.execute("SELECT * FROM Artist WHERE Name='{artist}'".
@@ -136,12 +135,10 @@ def search():
                         format(_id=artist_id))
             rows = cur.fetchall()
             album_id = [row[0] for row in rows]
-            print(album_id)
 
         for _id in album_id:
             cur.execute("SELECT * FROM Track WHERE AlbumId='{_id}'".format(_id = _id))
-            tracks.append(cur.fetchall())
-        tracks = tracks[0]
+            tracks += (cur.fetchall())
 
     if parameter is '2':
         cur.execute("SELECT * FROM Track WHERE Name='{name}'".format(name=data))
@@ -154,19 +151,20 @@ def search():
         cur.execute("SELECT * FROM Album WHERE Title='{title}'".
                     format(title=data))
         rows = cur.fetchall()
+
         if len(rows) is 0:
             flash("Not Found", category='error')
             return redirect(url_for("home"))
+
         album_id = [row[0] for row in rows]
-        print(album_id)
 
-    for _id in album_id:
-        cur.execute("SELECT * FROM Track WHERE AlbumId='{_id}'".format(_id=_id))
-        tracks.append(cur.fetchall())
-    tracks = tracks[0]
+        for _id in album_id:
+            cur.execute("SELECT * FROM Track WHERE AlbumId='{_id}'".format(_id=_id))
+            tracks += (cur.fetchall())
 
-
-    print(tracks[0])
+    for track in tracks:
+        print(track[1])
+    random.shuffle(tracks)
     names = [row[1] for row in tracks]
     urls = [row[9] for row in tracks]
 
