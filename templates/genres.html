@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <<select name= colours method="GET" action="/genres">
+        {% for colour in colours %}
+        <option value= "{{colour}}" SELECTED>{{colours}}</option>"
+        {% endfor %}
+    </select>
+
+{% endblock %}

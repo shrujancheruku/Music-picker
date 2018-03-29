@@ -66,9 +66,6 @@ def select_genres(conn):
     return rows
 
 
-conn = create_connection()
-
-
 if __name__ == '__main__':
     app.run()
 
