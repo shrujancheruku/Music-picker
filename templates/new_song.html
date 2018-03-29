@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <form action="{{ url_for('song_play') }}" method="post" style="height: 12%">
+        {{ form.hidden_tag() }}
+
+        {{ form.name.label }}
+        <br>
+        {{ form.name }}
+        <br>
+        {{ form.artist.label }}
+        <br>
+        {{ form.artist }}
+        <br>
+        {{ form.album.label }}
+        <br>
+        {{ form.album }}
+        <br>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+{% endblock %}

@@ -7,10 +7,10 @@
       <hr class="my-4">
       <p>We also have options to search by genre or add a new song</p>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Search by Genre</a>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('genre') }}" role="button">Search by Genre</a>
       </p>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Add song</a>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('new_song') }}" role="button">Add song</a>
       </p>
     </div>
 
