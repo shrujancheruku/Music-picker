@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <<select name= colours method="GET" action="/genres">
-        {% for colour in colours %}
-        <option value= "{{colour}}" SELECTED>{{colours}}</option>"
-        {% endfor %}
-    </select>
+    <form action="{{ url_for('genre_play') }}" method="post" style="height: 12%">
+        {{ form.hidden_tag() }}
+            {{ form.genre.label }}<br>
+            {{ form.genre }}
+
+        <p>{{ form.submit() }}</p>
+    </form>
 
 {% endblock %}
