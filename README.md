@@ -24,3 +24,11 @@ Things to Work On
 * Better playlist organization under the playing video
 * Better animation (shading active video, hover effects, transitions)
 * Account for input errors in search terms
+
+Packages Required
+----------------
+
+*Python3
+*Flask
+*sqlite3
+*flask-wtf
