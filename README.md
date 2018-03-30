@@ -28,7 +28,7 @@ Things to Work On
 Packages Required
 ----------------
 
-*Python3
-*Flask
-*sqlite3
-*flask-wtf
+* Python3
+* Flask
+* sqlite3
+* flask-wtf
