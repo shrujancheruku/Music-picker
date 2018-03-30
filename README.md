@@ -5,9 +5,9 @@ This is a Flask webapp built on top of a sqlite3 database. Allows playing of son
 It's responsive thanks to Bootstrap4, that I used on top of the Jinja2 templating engine. Try resizing the window to see!<br/>
 
 Run with <br/>
-`export FLASK_APP=app.py`<br/>
-`flask run`<br/>
-Should run the app on http://127.0.0.1:5000/
+```export FLASK_APP=app.py
+flask run```<br/>
+The app should run on http://127.0.0.1:5000/
 
 Completed Functionality
 -------------

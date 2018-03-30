@@ -3,23 +3,25 @@
 
 
     <div class="container">
-        <br/>
-        <div class="panel panel-default">
-          <div class="panel-body h1">{{ names[0] }}</div>
-        </div>
 
-  		<div class="vid-container">
-		    <iframe id="vid_frame" src="{{ 'http://www.youtube.com/embed/' + urls[0] + '?rel=0&showinfo=0&autohide=1' }}" frameborder="0" width="560" height="315"></iframe>
+
+
+  		<div class="panel panel-default">
+          <div class="panel-body h1" id="vid_name">{{ names[0] }}</div>
+        </div>
+        <div class="vid-container">
+		    <iframe id="vid_frame" src="{{ 'http://www.youtube.com/embed/' + urls[0] + '?rel=0&showinfo=0&autohide=1' }}" frameborder="0" width="100%"></iframe>
 		</div>
 
-        <hr/>
-        <div class="panel panel-default">
-            <div class="panel-body h1">Other Videos</div>
-        </div>
-		<div class="row">
+
+    <hr/>
+    <div class="panel panel-default">
+        <div class="panel-body h1">Other Videos</div>
+    </div>
+    <div class="row">
         {% for url in urls %}
         <div class="col-3">
-            <div class="vid-item" onClick="document.getElementById('vid_frame').src='{{ 'http://youtube.com/embed/' + url + '?autoplay=1&rel=0&showinfo=0&autohide=1' }}'">
+            <div class="vid-item" onClick="changeVideo('{{ 'http://youtube.com/embed/' + url + '?autoplay=1&rel=0&showinfo=0&autohide=1' }}', '{{ names[loop.index0] }}')">
                 <div class="thumb"><img src="{{ 'http://img.youtube.com/vi/' + url + '/0.jpg' }}"></div>
                 <div class="desc">{{ names[loop.index0] }}</div>
             </div>
@@ -34,6 +36,14 @@
         {% endfor %}
 
     </div>
+    </div>
+
+    <script>
+    function changeVideo(url, name){
+        document.getElementById('vid_name').innerHTML=name;
+        document.getElementById('vid_frame').src=url;
+        }
+    </script>
 
 
 {% endblock %}
