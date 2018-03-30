@@ -1,5 +1,9 @@
 import app
 
+"""
+Utility to add a new URL field to the Track table in the db
+"""
+
 table_name = 'Track'  # name of the table
 new_column = 'url'  # name of the new column
 column_type = 'TEXT'
@@ -10,8 +14,8 @@ conn = app.create_connection()
 cursor = conn.cursor()
 
 # Adding a new column with a default row value
-cursor.execute("ALTER TABLE {tn} ADD COLUMN '{cn}' {ct} DEFAULT '{df}'"\
-        .format(tn=table_name, cn=new_column, ct=column_type, df=default_val))
+cursor.execute("ALTER TABLE {tn} ADD COLUMN '{cn}' {ct} DEFAULT '{df}'"
+               .format(tn=table_name, cn=new_column, ct=column_type, df=default_val))
 
 # Committing changes and closing the connection to the database file
 conn.commit()

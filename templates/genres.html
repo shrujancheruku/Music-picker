@@ -4,9 +4,9 @@
     <form action="{{ url_for('genre_play') }}" method="post" style="height: 12%">
         {{ form.hidden_tag() }}
             {{ form.genre.label }}<br>
-            {{ form.genre }}
+            {{ form.genre(class_='form-control') }}
 
-        <p>{{ form.submit() }}</p>
+        <p>{{ form.submit(class_="btn btn-outline-success") }}</p>
     </form>
 
 {% endblock %}

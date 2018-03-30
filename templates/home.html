@@ -18,47 +18,33 @@
           <div class="panel-body h1">{{ names[0] }}</div>
         </div>
 
-  		<!-- THE YOUTUBE PLAYER -->
   		<div class="vid-container">
-		    <iframe id="vid_frame" src="{{ 'http://www.youtube.com/embed/' + urls[0] + '?rel=0&showinfo=0&autohide=1' }}" frameborder="0" width="560" height="315"></iframe>
+		    <iframe id="vid_frame" src="{{ 'http://www.youtube.com/embed/' + urls[0] + '?rel=0&showinfo=0&autohide=1' }}" frameborder="0" width="100%"></iframe>
 		</div>
 
-		<!-- THE PLAYLIST -->
-		<div class="vid-list-container">
-	        <div class="vid-list">
-                {% for name in names %}
- 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='{{ 'http://youtube.com/embed/' + urls[loop.index0] + '?autoplay=1&rel=0&showinfo=0&autohide=1' }}'">
- 	              <div class="thumb"><img src="{{ 'http://img.youtube.com/vi/' + urls[loop.index0] + '/0.jpg' }}"></div>
- 	              <div class="desc">{{ name }}</div>
- 	            </div>
-                {% endfor %}
-	 	    </div>
+
+    <hr/>
+    <div class="panel panel-default">
+        <div class="panel-body h1">Other Videos</div>
+    </div>
+    <div class="row">
+        {% for url in urls %}
+        <div class="col-3">
+            <div class="vid-item" onClick="document.getElementById('vid_frame').src='{{ 'http://youtube.com/embed/' + url + '?autoplay=1&rel=0&showinfo=0&autohide=1' }}'">
+                <div class="thumb"><img src="{{ 'http://img.youtube.com/vi/' + url + '/0.jpg' }}"></div>
+                <div class="desc">{{ names[loop.index0] }}</div>
+            </div>
         </div>
 
-        <!-- LEFT AND RIGHT ARROWS -->
-        <div class="arrows">
-        	<div class="arrow-left"><i class="fa fa-chevron-left fa-lg"></i></div>
-        	<div class="arrow-right"><i class="fa fa-chevron-right fa-lg"></i></div>
-        </div>
+            <!-- if last column in row -->
+            {% if (loop.index%4 == 0) and (not loop.last) %}
 
-  	</div>
+            </div> <hr/> <div class="row">
+            {% endif %}
 
-     	<script type="text/javascript">
-            $(document).ready(function () {
-                $(".arrow-right").bind("click", function (event) {
-                    event.preventDefault();
-                    $(".vid-list-container").stop().animate({
-                        scrollLeft: "+=336"
-                    }, 750);
-                });
-                $(".arrow-left").bind("click", function (event) {
-                    event.preventDefault();
-                    $(".vid-list-container").stop().animate({
-                        scrollLeft: "-=336"
-                    }, 750);
-                });
-            });
-        </script>
+        {% endfor %}
 
+    </div>
+    </div>
 
 {% endblock %}

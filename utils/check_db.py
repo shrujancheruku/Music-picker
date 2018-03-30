@@ -1,6 +1,9 @@
 import app
-import sqlite3
-import get_url
+from utils import get_url
+
+"""
+Check if any tracks in the db do not have urls, and query them from the YouTube API
+"""
 
 # Connecting to the database file
 conn = app.create_connection()
