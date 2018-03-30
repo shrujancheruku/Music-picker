@@ -6,7 +6,9 @@ It's responsive thanks to Bootstrap4, that I used on top of the Jinja2 templatin
 
 Run with <br/>
 ```export FLASK_APP=app.py
-flask run```<br/>
+flask run
+```
+<br/>
 The app should run on http://127.0.0.1:5000/
 
 Completed Functionality
