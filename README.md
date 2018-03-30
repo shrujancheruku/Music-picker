@@ -2,8 +2,10 @@ Music Picker
 ===============
 
 This is a Flask webapp built on top of a sqlite3 database. Allows playing of songs from YouTube, as well as querying.
+It's responsive thanks to Bootstrap4, that I used on top of the Jinja2 templating engine. Try it on mobile to see!
 
 Run with `python3 app.py`
+Should run the app on http://127.0.0.1:5000/
 
 Completed Functionality
 -------------
