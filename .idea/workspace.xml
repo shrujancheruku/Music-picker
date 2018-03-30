@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a83ebaf7-ce50-4a53-b7e6-6ed6d36c45c8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +23,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="285">
+              <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -331,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1522378971019</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Changed readme again">
+      <created>1522394160621</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1522394160621</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Changed readme">
+      <created>1522394382930</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1522394382930</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -343,9 +356,9 @@
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="3" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49921876" weight="0.32857144" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49921876" visible="true" weight="0.3280507" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1578125" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1578125" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="SciView" order="0" />
@@ -374,6 +387,7 @@
     <MESSAGE value="Working search" />
     <MESSAGE value="Cleaned up Navbar" />
     <MESSAGE value="Cleaned up UI" />
+    <MESSAGE value="Changed readme again" />
     <MESSAGE value="Changed readme" />
     <option name="LAST_COMMIT_MESSAGE" value="Changed readme" />
   </component>
@@ -503,8 +517,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="285">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
