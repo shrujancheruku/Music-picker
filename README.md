@@ -1,6 +1,8 @@
 Music Picker
 ===============
 
+12 hour take-home project. The only requirement was to use the given sqlite3 database. This required learning SQL, as well as understanding the YouTube API to obtain video info.
+
 This is a Flask webapp built on top of a sqlite3 database. Allows playing of songs from YouTube, as well as querying.
 It's responsive thanks to Bootstrap4, that I used on top of the Jinja2 templating engine. Try resizing the window to see!<br/>
 
